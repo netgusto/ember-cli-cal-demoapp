@@ -4,9 +4,9 @@
 import Ember from 'ember';
 
 // Importing Calendar resources
-import CalendarRangeStoreMixin from 'ember-cal/mixins/range-store';
-import CalendarEventStoreMixin from 'ember-cal/mixins/event-store';
-import CalendarTools from 'ember-cal/utilities/calendartools';
+import CalendarRangeStoreMixin from 'ember-cli-cal/mixins/range-store';
+import CalendarEventStoreMixin from 'ember-cli-cal/mixins/event-store';
+import CalendarTools from 'ember-cli-cal/utilities/calendartools';
 
 // Your controller should extend CalendarRangeStoreMixin and CalendarEventStoreMixin
 // CalendarEventStoreMixin offers convenient routines to store and merge calendar events efficiently
