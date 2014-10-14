@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-cal-consume',
+    modulePrefix: 'ember-cli-cal-demoapp',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
