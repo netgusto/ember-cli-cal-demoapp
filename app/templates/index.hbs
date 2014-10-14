@@ -1,8 +1,32 @@
-{{ember-cal
-    component=calendar
-    events=calendarevents
-    color='#FF0000'
-    textcolor='#FFFFFF'
-    viewChanged='viewChanged'
-    eventSelected='eventSelected'
-    eventUnselected='eventUnselected'}}
+<div class="container">
+
+    <div class="row demo-header"><!-- @ws
+        --><div class="col-xs-8"><h2 class="demo-calendartitle">{{calendar.title}}</h2></div><!-- @ws
+        --><div class="col-xs-4 text-right">{{ember-cal-controls calendar=calendar}}</div>
+    </div>
+
+    <div class="row">
+        <div {{bind-attr class="displayClass"}}>
+            {{ember-cal
+                component=calendar
+                events=calendarevents
+                color='#FF0000'
+                textcolor='#FFFFFF'
+                viewChanged='viewChanged'
+                eventSelected='eventSelected'
+                eventUnselected='eventUnselected'}}
+        </div>
+
+        {{#if selectedEvent}}
+        <div class="col-sm-3 well">
+            <h2 style="margin-top: 0;">{{selectedEvent.label}}</h2>
+            <p><strong>From:</strong> {{selectedEvent.start}}</p>
+            <p><strong>To:</strong> {{selectedEvent.end}}</p>
+            {{#if selectedEvent.payload.recurrence_freq}}
+                <p>Recurrence: {{selectedEvent.payload.recurrence_freq}}</p>
+            {{/if}}
+            <p class="text-right"><button class="btn btn-default btn-sm" {{action 'closeEvent'}}>Close</button></p>
+        </div>
+        {{/if}}
+    </div>
+</div>
