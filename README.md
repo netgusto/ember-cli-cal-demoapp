@@ -2,6 +2,8 @@
 
 Demo app for [ember-cli-cal](https://github.com/netgusto/ember-cli-cal), the calendar component for ember-cli.
 
+See <http://netgusto.github.io/ember-cli-cal-demoapp> for an online demo.
+
 ![](http://netgusto.com/images/ember-cal.png)
 
 
