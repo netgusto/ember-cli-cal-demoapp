@@ -71,7 +71,7 @@ export default Ember.Controller.extend(CalendarRangeStoreMixin, CalendarEventSto
 
             for (var i = 1; i <= 5; i++) {
                 var randomstart = range.start.clone().add(getRandomInt(0, 30), 'days').hour(0).minute(0).second(0).millisecond(0);
-                var randomend = randomstart.clone().add(getRandomInt(1, 9), 'days');
+                var randomend = randomstart.clone().add(getRandomInt(0, 9), 'days');
 
                 // The calendar component uses a proxy Event model, defining only the property used for display in the calendar view
                 // You may associate this DisplayedEvent proxy and your own Event model using the `payload` property of the proxy (see below)
